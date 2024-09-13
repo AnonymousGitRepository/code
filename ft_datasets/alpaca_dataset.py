@@ -1,8 +1,3 @@
-# Copyright (c) Meta Platforms, Inc. and affiliates.
-# This software may be used and distributed according to the terms of the Llama 2 Community License Agreement.
-
-# For dataset details visit: https://crfm.stanford.edu/2023/03/13/alpaca.html
-
 import copy
 import json
 import os
