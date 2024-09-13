@@ -1,0 +1,37 @@
+{
+    "train": [
+        {
+            "instruction": "Task: In this task, you are given a sentence. Your task is to classify the sentiment of the sentence as 'positive', 'negative' or 'neutral'.",
+            "input": "open",
+            "output": "neutral"
+        },
+        {
+            "instruction": "Given some text, you need to determine if the sentiment in the text is positive, negative or neutral.",
+            "input": "inferior",
+            "output": "negative"
+        },
+        {
+            "instruction": "Task: In this task, you are given a sentence. Your task is to classify the sentiment of the sentence as 'positive', 'negative' or 'neutral'.",
+            "input": "not offensive",
+            "output": "positive"
+        }
+    ],
+    "val": [
+        {
+            "instruction": "You are given a section of text. Your task is to determine whether it contains either positive or negative sentiment about the environment or is neutral i.e., not related with respect to the environment .",
+            "input": "russian",
+            "output": "neutral"
+        },
+        {
+            "instruction": "Task: In this task, you are given a sentence. Your task is to classify the sentiment of the sentence into 'positive', 'negative' or 'neutral'.",
+            "input": "improper",
+            "output": "negative"
+        },
+        {
+            "instruction": "You are given some text and you need to detect the sentiment of that text. The sentiment can be 'positive', 'neutral', or 'negative'.",
+            "input": "european",
+            "output": "neutral"
+        }
+    ]
+}
+
