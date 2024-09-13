@@ -1,7 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
-
 import torch, os, random, argparse, sys
 import numpy as np
 from transformers import LlamaForCausalLM, LlamaTokenizer, AutoTokenizer, AutoModelForCausalLM
@@ -12,12 +10,12 @@ from contextlib import nullcontext
 from transformers import default_data_collator, Trainer, TrainingArguments
 
 
-
 def read_json(path):
     import json
     with open(path, "r") as f:
         data = json.load(f)
     return data
+
 
 def set_seed(seed):
     torch.manual_seed(seed)
@@ -71,7 +69,6 @@ def load_dataset(tokenizer):
     return train_dataset, val_dataset
 
 
-
 def create_peft_config(args, model, llama2=True):
     from peft import (
         get_peft_model,
@@ -96,8 +93,6 @@ def create_peft_config(args, model, llama2=True):
     return model, peft_config
 
 
-
-
 if __name__=='__main__':
     args = args_init()
     set_seed(args.seed)
@@ -116,7 +111,6 @@ if __name__=='__main__':
         'gradient_checkpointing': args.gradient_checkpointing,
     }
 
-    
     profiler = nullcontext()
     # Define training args
     training_args = TrainingArguments(
@@ -152,7 +146,6 @@ if __name__=='__main__':
     
         # Start training
         trainer.train()
-
 
 model.save_pretrained(args.out_dir)
 print(f"training of {args.model_name_or_path} is done!")
