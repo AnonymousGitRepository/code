@@ -1,0 +1,1 @@
+from .alpaca_dataset import InstructionDataset as get_alpaca_dataset
