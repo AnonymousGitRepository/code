@@ -16,6 +16,16 @@ CUDA_VISIBLE_DEVICES=0 python train.py
                 --model_name_or_path   # llama2 base model or falcon model
                 --lora_rank            # for rank in lora
                 --lora_alpha           # for alpha in lora
+                --lora_dropout         # for dropout in lora
+                --seed                 # random seed   
+                --lr                   # learning rate
+                --out_dir              # output directory
+                --num_train_epochs     # number of epochs
+                --gradient_accumulation_steps 
+                --per_device_train_batch_size
+                --logging_steps # logging steps in trainer
+                --save_steps    # checkpoint save steps in trainer
+                --eval_steps    # evaluation steps in trainer
                 
 ```
-Note: for llama2 and falcon models, different params will be updated during training by lora approach.
+The LoRA model will be saved in the output directory. Note: For Llama2 and Falcon models, different parameters will be updated during training using the LoRA (Low-Rank Adaptation) approach.
